@@ -13,6 +13,13 @@
 		A066BDD6280850E0000C0B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A066BDD4280850E0000C0B47 /* Main.storyboard */; };
 		A066BDD8280850E2000C0B47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A066BDD7280850E2000C0B47 /* Assets.xcassets */; };
 		A066BDDB280850E2000C0B47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A066BDD9280850E2000C0B47 /* LaunchScreen.storyboard */; };
+		A066BDE32808519D000C0B47 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A066BDE22808519D000C0B47 /* NetworkService.swift */; };
+		A066BDE828085268000C0B47 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A066BDE728085268000C0B47 /* CharacterModel.swift */; };
+		A066BDF22808987E000C0B47 /* UIImageView + Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = A066BDF12808987E000C0B47 /* UIImageView + Download.swift */; };
+		A066BDF42808A57F000C0B47 /* DetailCharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A066BDF32808A57F000C0B47 /* DetailCharacterModel.swift */; };
+		A066BDF62808A994000C0B47 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A066BDF52808A994000C0B47 /* DetailViewController.swift */; };
+		A066BDFD28096BA0000C0B47 /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A066BDFB28096BA0000C0B47 /* CharacterViewCell.swift */; };
+		A066BDFE28096BA0000C0B47 /* CharacterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A066BDFC28096BA0000C0B47 /* CharacterViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		A066BDD7280850E2000C0B47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A066BDDA280850E2000C0B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A066BDDC280850E2000C0B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A066BDE22808519D000C0B47 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A066BDE728085268000C0B47 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		A066BDF12808987E000C0B47 /* UIImageView + Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Download.swift"; sourceTree = "<group>"; };
+		A066BDF32808A57F000C0B47 /* DetailCharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterModel.swift; sourceTree = "<group>"; };
+		A066BDF52808A994000C0B47 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A066BDFB28096BA0000C0B47 /* CharacterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCell.swift; sourceTree = "<group>"; };
+		A066BDFC28096BA0000C0B47 /* CharacterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,62 @@
 		A066BDCD280850E0000C0B47 /* AppricotTsetProject */ = {
 			isa = PBXGroup;
 			children = (
+				A066BDF028089852000C0B47 /* Extensions */,
+				A066BDEB280890FA000C0B47 /* Cells */,
+				A066BDEA280890E9000C0B47 /* Services */,
+				A066BDE9280890C9000C0B47 /* Controllers */,
+				A066BDE4280851DB000C0B47 /* Models */,
 				A066BDCE280850E0000C0B47 /* AppDelegate.swift */,
 				A066BDD0280850E0000C0B47 /* SceneDelegate.swift */,
-				A066BDD2280850E0000C0B47 /* ViewController.swift */,
 				A066BDD4280850E0000C0B47 /* Main.storyboard */,
 				A066BDD7280850E2000C0B47 /* Assets.xcassets */,
 				A066BDD9280850E2000C0B47 /* LaunchScreen.storyboard */,
 				A066BDDC280850E2000C0B47 /* Info.plist */,
 			);
 			path = AppricotTsetProject;
+			sourceTree = "<group>";
+		};
+		A066BDE4280851DB000C0B47 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A066BDE728085268000C0B47 /* CharacterModel.swift */,
+				A066BDF32808A57F000C0B47 /* DetailCharacterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A066BDE9280890C9000C0B47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A066BDD2280850E0000C0B47 /* ViewController.swift */,
+				A066BDF52808A994000C0B47 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A066BDEA280890E9000C0B47 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A066BDE22808519D000C0B47 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A066BDEB280890FA000C0B47 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A066BDFB28096BA0000C0B47 /* CharacterViewCell.swift */,
+				A066BDFC28096BA0000C0B47 /* CharacterViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A066BDF028089852000C0B47 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A066BDF12808987E000C0B47 /* UIImageView + Download.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +188,7 @@
 			files = (
 				A066BDDB280850E2000C0B47 /* LaunchScreen.storyboard in Resources */,
 				A066BDD8280850E2000C0B47 /* Assets.xcassets in Resources */,
+				A066BDFE28096BA0000C0B47 /* CharacterViewCell.xib in Resources */,
 				A066BDD6280850E0000C0B47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +200,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A066BDF62808A994000C0B47 /* DetailViewController.swift in Sources */,
 				A066BDD3280850E0000C0B47 /* ViewController.swift in Sources */,
+				A066BDE828085268000C0B47 /* CharacterModel.swift in Sources */,
+				A066BDFD28096BA0000C0B47 /* CharacterViewCell.swift in Sources */,
 				A066BDCF280850E0000C0B47 /* AppDelegate.swift in Sources */,
+				A066BDE32808519D000C0B47 /* NetworkService.swift in Sources */,
 				A066BDD1280850E0000C0B47 /* SceneDelegate.swift in Sources */,
+				A066BDF42808A57F000C0B47 /* DetailCharacterModel.swift in Sources */,
+				A066BDF22808987E000C0B47 /* UIImageView + Download.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
